@@ -1,0 +1,60 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.31205726545458107 0.2937714363921328 -0.9035035175565794 1.7319450596917587
+  position 0.22027496419894166 2.5588823585106293 1.6052836434158007
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  floorAppearance NULL
+}
+E-puck {
+  hidden position_0_0 10.999826611170228
+  hidden position_0_1 9.191733725211542
+  hidden rotation_1 0 -1 0 1.566544003188945
+  hidden rotation_2 0 -0.9999999999999999 0 3.3746368891476313
+  translation 0.191364 0.44 -6.39563e-05
+  rotation -0.0004090457579671294 0.00029623384679688724 0.9999998724635297 -3.0861650010791606
+  controller "puck2_controller"
+  groundSensorsSlot [
+    DistanceSensor {
+      translation 0 -0.01 0
+      rotation 0 1 0 1.57
+      name "ir0"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 0.02 0
+      rotation 0 1 0 1.57
+      name "ir1"
+      type "infra-red"
+    }
+  ]
+}
+Transform {
+  translation 1.9 -0.2 0
+  scale 0.03 0.03 0.02
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Mesh {
+        url [
+          "../Downloads/Epic Blad/tinker.obj"
+        ]
+      }
+    }
+  ]
+}
